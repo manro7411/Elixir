@@ -1,6 +1,6 @@
 defmodule Tutorials.Recursion.PrintDigits do
   def upto(0) do
-    0
+    :ok
   end
   def upto(nums) do
     IO.puts(nums) #3,2,1,0
