@@ -1,10 +1,6 @@
-# There are 2 type of Elixir --> .exs is script file -->.ex is compile file
-# create def modules
+# Define the Hello module with the world/1 function
 defmodule Hello do
   def world(name) do
     IO.puts("Hello #{name}")
-
   end
 end
-
-Hello.world()
