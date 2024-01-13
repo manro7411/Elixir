@@ -1,10 +1,15 @@
 defmodule Tutorials.Recursion.PrintDigits do
+  #base case
   def upto(0) do
+    #return
     :ok
   end
+
+  #
   def upto(nums) do
-    IO.puts(nums) #3,2,1,0
+     #3,2,1,0
     upto(nums-1)
+    IO.puts(nums)
 
   end
 end
