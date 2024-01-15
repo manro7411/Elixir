@@ -1,1 +1,1 @@
-IO.puts "Hello world Elixir"
+IO.puts "Hello world Elixir!"
