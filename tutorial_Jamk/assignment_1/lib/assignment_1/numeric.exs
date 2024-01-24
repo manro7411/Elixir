@@ -23,3 +23,19 @@ operation = 154/78
 IO.puts("The result : #{operation}")
 IO.puts("Rouded number : #{round(operation)}")
 IO.puts("Integer number : #{div(154,78)}")
+
+# Ask a line of text from the user
+IO.puts "Enter a line of text:"
+user_input = IO.gets("")
+
+# Print the number of characters in the entered string
+char_count = String.length(String.trim(user_input))
+IO.puts "Number of characters: #{char_count}"
+
+# Print the entered text in reverse
+reversed_text = String.reverse(user_input)
+IO.puts "Reversed text: #{reversed_text}"
+
+# Replace the word "foo" with "bar" and print the resulted string
+modified_text = String.replace(user_input, "foo", "bar")
+IO.puts "Modified text: #{modified_text}"
