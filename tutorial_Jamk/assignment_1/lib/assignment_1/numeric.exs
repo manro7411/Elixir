@@ -20,3 +20,5 @@ reverse_alphabet = String.reverse(alphabet);
 IO.puts("Reverse Sentence #{reverse_alphabet}")
 modified = String.replace(user,"foo",'bar')
 IO.puts("Text is modified : {modified}")
+
+#part4
