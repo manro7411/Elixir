@@ -22,3 +22,4 @@ modified = String.replace(user,"foo",'bar')
 IO.puts("Text is modified : {modified}")
 
 #part4
+multiplication = fn a,b,c ->  a*b*c end
