@@ -23,12 +23,19 @@ IO.puts("Text is modified : {modified}")
 
 #part4
 multiplication_function = fn a, b, c -> a * b * c end
-
 IO.puts "Enter the first number:"
 num1 = String.to_integer(IO.gets(""))
-
 IO.puts "Enter the second number:"
 num2 = String.to_integer(IO.gets(""))
-
 IO.puts "Enter the third number:"
 num3 = String.to_integer(IO.gets(""))
+result_product = multiplication_function.(num1, num2, num3)
+IO.puts "Product of the three numbers: #{result_product}"
+concat_function = fn list1, list2 -> list1 ++ list2 end
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+result_concat = concat_function.(list1, list2)
+IO.inspect "Concatenated list: #{result_concat}"
+status_tuple = {:ok, :fail}
+status_tuple_with_canceled = Tuple.put_elem(status_tuple, 2, :canceled)
+IO.inspect "Combined tuple: #{status_tuple_with_canceled}"
