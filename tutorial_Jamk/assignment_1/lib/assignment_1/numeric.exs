@@ -23,9 +23,12 @@ IO.puts("Text is modified : {modified}")
 
 #part4
 multiplication_function = fn a, b, c -> a * b * c end
+
 IO.puts "Enter the first number:"
 num1 = String.to_integer(IO.gets(""))
+
 IO.puts "Enter the second number:"
 num2 = String.to_integer(IO.gets(""))
+
 IO.puts "Enter the third number:"
 num3 = String.to_integer(IO.gets(""))
