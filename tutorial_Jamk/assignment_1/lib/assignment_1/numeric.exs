@@ -13,22 +13,22 @@ IO.puts("Rouded number : #{round(operation)}")
 IO.puts("Integer number : #{div(154,78)}")
 
 #part3
-user = IO.gets("Enter the Sentences : ")
-alphabet =  String.length(String.trim(user))
-IO.puts("Sentences : #{alphabet}");
-reverse_alphabet = String.reverse(alphabet);
-IO.puts("Reverse Sentence #{reverse_alphabet}")
-modified = String.replace(user,"foo",'bar')
-IO.puts("Text is modified : {modified}")
+# user = IO.gets("Enter the Sentences : ")
+# alphabet =  String.length(String.trim(user))
+# IO.puts("Sentences : #{alphabet}");
+# reverse_alphabet = String.reverse(alphabet);
+# IO.puts("Reverse Sentence #{reverse_alphabet}")
+# modified = String.replace(user,"foo",'bar')
+# IO.puts("Text is modified : {modified}")
 
 #part4
 multiplication_function = fn a, b, c -> a * b * c end
-IO.puts "Enter the first number:"
-num1 = String.to_integer(IO.gets(""))
-IO.puts "Enter the second number:"
-num2 = String.to_integer(IO.gets(""))
-IO.puts "Enter the third number:"
-num3 = String.to_integer(IO.gets(""))
+IO.puts("Enter the first number:")
+number1 = String.trim(IO.gets("")) |> String.to_integer()
+IO.puts("Enter the second number:")
+number2 = String.trim(IO.gets("")) |> String.to_integer()
+IO.puts("Enter the third number:")
+number3 = String.trim(IO.gets("")) |> String.to_integer()
 result_product = multiplication_function.(num1, num2, num3)
 IO.puts "Product of the three numbers: #{result_product}"
 concat_function = fn list1, list2 -> list1 ++ list2 end
