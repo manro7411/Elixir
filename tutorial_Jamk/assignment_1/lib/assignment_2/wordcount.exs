@@ -16,3 +16,5 @@ defmodule PigLatinTranslator do
   def translate_word("xr" <> rest), do: rest <> "xray"
   def translate_word(word), do: word <> "ay"
 end
+
+phrase = "Pattern Matching with Elixir. Remember that equals sign is a match operator, not an assignment."
