@@ -18,3 +18,9 @@ defmodule PigLatinTranslator do
 end
 
 phrase = "Pattern Matching with Elixir. Remember that equals sign is a match operator, not an assignment."
+translated_phrase =
+  phrase
+  |> String.split(~r/\s+/)
+  |> Enum.map(&PigLatinTranslator.translate_word/1)
+  |> Enum.join(" ")
+IO.puts(translated_phrase)
