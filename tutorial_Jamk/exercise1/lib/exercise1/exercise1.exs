@@ -1,6 +1,4 @@
-
 #Exercise_1
-
 x = 42
 [x,1,2,3] = [x,1,2,3]
 IO.puts("The result equals : #{x}")
@@ -26,8 +24,6 @@ defmodule ResultPrinter do
 end
 result_tuple = {:ok, "Ratchanon is gone"}
 ResultPrinter.print_result(result_tuple)
-
-
 #exercise 4
 # IO.gets("Insert the value : ")
 defmodule NumberToWord do
@@ -35,14 +31,18 @@ defmodule NumberToWord do
   def convert(1), do: "one"
   def convert(_), do: "other"
 end
-# Example usage:
 IO.puts NumberToWord.convert(0)
 IO.puts NumberToWord.convert(1)
 IO.puts NumberToWord.convert(42)
 #exercise 5
-
+# x = 42
+# case some_value do
+#   ^x ->
+#     IO.puts "The value matches 42."
+#   _ ->
+#     IO.puts "The value does not match 42."
+# end
 #exercise 6 --> atom matching
-# return :ok, :error, :unknown
 defmodule Atomize do
   def my_map do
     %{
@@ -52,11 +52,7 @@ defmodule Atomize do
     }
   end
 end
-
-# Retrieve and print the map from Atomize module
 result_map = Atomize.my_map()
 IO.inspect(result_map)
-
 #exercise 7
-
 #exercise 8
