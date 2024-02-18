@@ -1,0 +1,38 @@
+
+# defmodule  numeric do
+#   if x = 42 do
+#     IO.puts("The result equals :#{x}")
+#   end
+# end
+
+# IO.puts(numeric)
+
+
+# defmodule pattern do
+#   def printout ([head | tail]) do
+#   end
+
+# end
+
+# defmodule  Cheching do
+#   IO.get
+#   def check(a) do
+#     if  a = a do
+#       IO.puts("The result is true")
+#     end
+#   end
+# end
+
+# {status,_} = {:ok, value}
+
+# Example tuple
+
+# input = IO.gets("")
+# IO.puts(input)
+# case input = 0 do
+#    -> "Input equals to Zero"
+# end
+
+# defmodule Checking(input) do
+
+# end
