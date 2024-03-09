@@ -1,15 +1,9 @@
 defmodule User do
-  defstruct firstname: "", lastname: "",id_number: nil,salary: 0,job: none;
-  # salary has a default value 0
-  # job has a default value of :none
-
-  def new_User(inp) do
-
+  defstruct firstname: "", lastname: "", id_number: nil, salary: 0, job: :none
+  def new_user(attrs) do
+    %User{attrs | id_number: get_next_id()}
   end
-
-  defp get_id do
-    id_number+1
-
+  defp get_next_id do
+    id_number + 1
   end
-
 end
