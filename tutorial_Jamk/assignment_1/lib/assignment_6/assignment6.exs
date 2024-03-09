@@ -4,4 +4,9 @@ defmodule User do
   def new_User(inp) do
 
   end
+
+  defp get_id do
+
+  end
+
 end
