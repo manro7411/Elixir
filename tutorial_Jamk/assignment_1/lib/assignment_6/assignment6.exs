@@ -3,13 +3,13 @@ defmodule Employee do
 
   defstruct first_name: "", last_name: "", id_number: nil, salary: 0, job: :none
 
-  def new_employee(attrs) do
-    %Employee{attrs | id_number: get_next_id()}
+  def new_employee(inp) do
+    %Employee{inp | id_number: get_next_id()}
   end
 
   defp get_next_id do
     id = @counter + 1
-    @counter = id
+    Module.register_attribute(__MODULE__, :counter, id: id)
     id
   end
 
