@@ -3,8 +3,8 @@ defmodule Employee do
 
   defstruct first_name: "", last_name: "", id_number: nil, salary: 0, job: :none
 
-  def new_employee(inp) do
-    %Employee{inp | id_number: get_next_id()}
+  def new_employee(attrs) do
+    %Employee{attrs | id_number: get_next_id()}
   end
 
   defp get_next_id do
@@ -31,3 +31,13 @@ defmodule Employee do
     salary + 2000
   end
 end
+
+# Execution
+nine_trai = Employee.new_employee(%{first_name: "Ratchanon", last_name: "Traitiprat"})
+IO.inspect nine_trai
+
+promoted_nine = Employee.promote(nine_trai)
+IO.inspect promoted_nine
+
+demoted_nine = Employee.demote(promoted_nine)
+IO.inspect demoted_nine
