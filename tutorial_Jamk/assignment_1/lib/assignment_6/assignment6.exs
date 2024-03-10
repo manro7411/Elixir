@@ -1,19 +1,7 @@
 defmodule Employee do
-  use GenServer
+  @counter 0
 
-  defmodule Job do
-    defstruct none: 0, coder: 2000, designer: 4000, manager: 6000, ceo: 8000
-  end
-
-  defstruct [:first_name, :last_name, :id_number, :salary, :job]
-
-  def start_link(_) do
-    GenServer.start_link(__MODULE__, [], name: __MODULE__)
-  end
-
-  def init(_) do
-    {:ok, %{counter: 0, job: :none, salary: 0}}
-  end
+  defstruct first_name: "", last_name: "", id_number: nil, salary: 0, job: :none
 
   def new_employee(attrs) do
     id = get_next_id()
@@ -21,7 +9,7 @@ defmodule Employee do
   end
 
   defp get_next_id do
-    GenServer.call(__MODULE__, {:get_next_id})
+    @counter + 1
   end
 
   def promote(employee) do
@@ -30,11 +18,6 @@ defmodule Employee do
 
   def demote(employee) do
     %Employee{employee | job: :none, salary: 0}
-  end
-
-  def handle_call({:get_next_id}, _from, state) do
-    id = state.counter + 1
-    {:reply, id, %{state | counter: id}}
   end
 
   defp next_job(:none), do: :coder
@@ -49,8 +32,6 @@ defmodule Employee do
 end
 
 # Execution
-{:ok, _} = Employee.start_link([])
-
 nine_trai = Employee.new_employee(%{first_name: "Ratchanon", last_name: "Traitiprat"})
 IO.inspect nine_trai
 
